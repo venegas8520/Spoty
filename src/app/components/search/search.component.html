@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-sm-1">
+        <i class="fa fa-search text-light" aria-hidden="true"></i>
+    </div>
+
+    <div class="col-sm-11">
+        <input #busqueda (keyup)="buscarArtista(busqueda.value)" type="text" class="form-control" placeholder="Buscar artista">
+    </div>
+</div>
+<br>
+<app-load *ngIf="load"></app-load>
+
+<app-cards [items]="artistas"></app-cards>

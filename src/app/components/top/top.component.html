@@ -1,0 +1,18 @@
+<div class="card-columns m-5">
+    <div class="card cursor">
+        <div class="card">
+            <img [src]="artist.tracks[0].album.images | sinimagen" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="text-warning card-title">
+                    Nombre: {{artist.tracks[0].name}}
+                </h5>
+                <small>Autor: {{artist.tracks[0].artists[0].name}}</small>
+                <br>
+                <span class="badge badge-warning">{{artist.tracks[0].album.release_date}}</span>
+
+                <p class="card-text">Esta es la mejor canción del artista seleccionado, con el nombre de la canción,autor, fecha de salida e imagen de album, usando el parametro "Get an Artist's Top Tracks".</p>
+
+            </div>
+        </div>
+    </div>
+</div>

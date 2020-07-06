@@ -1,0 +1,18 @@
+<div class="card-columns m-5">
+    <div (click)="verArtista(item)" *ngFor="let item of items" class="card cursor">
+        <div class="card">
+            <img [src]="item.images | sinimagen" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="text-warning card-title">
+                    {{item.name}}
+                </h5>
+                <small>Tipo: {{item.type}}</small>
+                <br>
+                <span *ngFor="let artist of item.artists" class="badge badge-warning">{{artist.name}}</span>
+
+                <p class="card-text">Texto de prueba, no hay descripción en el arreglo, esto lo sustituye.</p>
+                <a name="" id="" class="btn btn-light" role="button" (click)="verTop(item)">Ir a su mejor canción</a>
+            </div>
+        </div>
+    </div>
+</div>
